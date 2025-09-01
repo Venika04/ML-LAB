@@ -2,7 +2,7 @@
 import numpy as np
 
 class Perceptron:
-    def _init_(self): self.w = np.zeros(3)
+    def __init__(self): self.w = np.zeros(3)
     def predict(self, x): return 1 if np.dot(self.w, x) >= 0 else 0
     def train(self, X, y, lr=0.1, epochs=10):
         for _ in range(epochs):
